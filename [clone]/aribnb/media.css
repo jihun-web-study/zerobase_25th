@@ -1,0 +1,52 @@
+@media (max-width: 1880px) {
+  :root {
+    --breakpoint-grid_columns: 5;
+  }
+}
+
+@media (max-width: 1640px) {
+  :root {
+    --breakpoint-grid_columns: 4;
+  }
+}
+
+@media (max-width: 1128px) {
+  :root {
+    --breakpoint-grid_columns: 3;
+  }
+}
+
+@media (max-width: 950px) {
+  :root {
+    --breakpoint-grid_columns: 2;
+  }
+
+  .header .gnb-menu {
+    display: none;
+  }
+
+  .searchbar {
+    display: none;
+  }
+
+  .searchbar-small {
+    display: flex;
+  }
+
+  .searchbar .searchbar-logo {
+    background-color: #e00b41;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  :root {
+    --breakpoint-grid_columns: 1;
+  }
+}

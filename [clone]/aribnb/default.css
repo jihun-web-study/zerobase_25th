@@ -1,0 +1,299 @@
+:root {
+  --logo-color: #ff385c;
+  --gray-light: #c6c6c6;
+  --gray-dark: #717171;
+
+  --breakpoint-grid_columns: 6;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.bg-black {
+  position: absolute;
+  width: 100vw;
+  height: 1000px;
+  background-color: black;
+  z-index: 1;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  min-height: 212px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-light);
+  z-index: 10;
+  color: white;
+  position: sticky;
+}
+
+.header .top {
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.header .logo {
+  color: var(--logo-color);
+  position: absolute;
+  left: 0;
+}
+
+.header .gnb-menu {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.gnb-menu button {
+  font-size: 16px;
+}
+
+.header .menu {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  height: 48px;
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+}
+
+.header .menu .menu-usermenu {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: var(--gray-dark);
+}
+
+.menu-usermenu svg {
+  width: 32px;
+}
+
+.searchbar {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--gray-light);
+  border-radius: 100px;
+  padding: 8px 12px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  background-color: white;
+  color: black;
+  flex: 1;
+}
+
+.searchbar-small {
+  width: 100%;
+  height: auto;
+  display: none;
+  border: 1px solid var(--gray-light);
+  border-radius: 100px;
+  padding: 8px 20px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  color: black;
+  align-items: center;
+}
+
+.searchbar-small .searchbar-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+.searchbar-small .searchbar-text span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.searchbar-small .searchbar-text input {
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.searchbar-small .searchbar-text input::placeholder {
+  color: var(--gray-light);
+}
+
+.searchbar .searchbar-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-left: 10px;
+}
+
+.searchbar .searchbar-text::after {
+  content: "";
+  position: absolute;
+  top: 10%; /* 상단에서부터 얼마나 떨어져 있는지. 이 경우, 높이의 10%만큼 떨어져 있음 */
+  right: 0;
+  height: 80%; /* 전체 높이의 80%만큼 border를 주기 위해 */
+  border-right: 1px solid var(--gray-light); /* border 스타일을 원하는대로 설정 */
+}
+
+.searchbar .searchbar-text:nth-child(4)::after {
+  border: none;
+}
+
+.searchbar .searchbar-text span {
+  font-size: 12px;
+}
+
+.searchbar .searchbar-text {
+  font-size: 14px;
+}
+
+.searchbar .searchbar-logo {
+  background-color: #e00b41;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.category {
+  width: 100%;
+  height: auto;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.icon-wrap {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  padding-right: 10px;
+}
+
+.icon-wrap .icon {
+  flex-shrink: 0;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.icon-wrap .icon:hover {
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.icon-wrap .icon:active {
+  border-bottom: 1px solid var(--gray-dark);
+}
+
+.icon > img {
+  width: 24px;
+  height: 24px;
+}
+
+.icon span {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.next-btn {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translate(0, -50%);
+  width: 28px;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--gray-dark);
+  border-radius: 50%;
+}
+
+.filter-btn {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid var(--gray-light);
+  font-size: 12px;
+  margin-left: 16px;
+}
+
+.content {
+  width: 100%;
+
+  height: 100%;
+  padding: 16px 5%;
+  display: grid;
+  grid-template-columns: repeat(
+    var(--breakpoint-grid_columns, 1),
+    minmax(0, 1fr)
+  );
+  column-gap: 12px;
+  row-gap: 24px;
+
+  overflow-y: scroll;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.item > .highlight {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.highlight span:first-child {
+  font-weight: bold;
+}
+
+.item > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.item > span:nth-child(3),
+.item > span:nth-child(4) {
+  color: var(--gray-light);
+  font-size: 12px;
+}
+
+.item > span:last-child {
+  font-size: 14px;
+  font-weight: bold;
+}
