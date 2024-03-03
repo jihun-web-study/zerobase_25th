@@ -67,26 +67,30 @@ th {
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  background-color: white;
+  width: 100vw;
+  height: 100dvh;
 }
 
 button {
-  background-color: white;
   border: none;
+  background-color: white;
 }
 
 button:hover {
+  cursor: pointer;
   background-color: white;
 }
 
 input {
-  background-color: white;
   outline: none;
   border: none;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
