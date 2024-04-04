@@ -2,17 +2,17 @@
 
 */
 
-const solution1 = (money) => {
+const solution1 = () => {
   //
   return;
 };
 
-const solution2 = (money) => {
+const solution2 = () => {
   //
   return;
 };
 
-const solution3 = (money) => {
+const solution3 = () => {
   //
   return;
 };
