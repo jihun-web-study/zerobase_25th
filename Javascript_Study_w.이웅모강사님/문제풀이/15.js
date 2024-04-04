@@ -1,24 +1,30 @@
-/* 
+/* Star pattern 2
+ *****
+ ****
+ ***
+ **
+ *
+ */
 
-*/
+/* 별찍기 1과 반대 */
 
-const solution1 = () => {
-  //
-  return;
+const star1_1 = (n) => {
+  // for 문 사용
+  for (let index = n; index > 0; index--) {
+    console.log("*".repeat(index));
+  }
 };
 
-const solution2 = () => {
-  //
-  return;
+const star1_2 = (n) => {
+  // while 문 사용
+  let count = n;
+
+  while (count > 0) {
+    /* if (count > n) break; */
+    console.log("*".repeat(count));
+    count -= 1;
+  }
 };
 
-const solution3 = () => {
-  //
-  return;
-};
-
-console.log("===solution1===");
-
-console.log("===solution2===");
-
-console.log("===solution3===");
+star1_1(5);
+star1_2(5);
