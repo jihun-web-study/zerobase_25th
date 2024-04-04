@@ -2,20 +2,20 @@
 
 */
 
-function solution1(num1, num2) {
+const solution1 = (money) => {
   //
   return;
-}
+};
 
-function solution2(num1, num2) {
+const solution2 = (money) => {
   //
   return;
-}
+};
 
-function solution3(num1, num2) {
+const solution3 = (money) => {
   //
   return;
-}
+};
 
 console.log("===solution1===");
 
