@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  background-color: #c6c6c6;
+}
+
+.wrap {
+  width: 390px;
+  height: 100vh;
+  margin: 0 auto;
+
+  background-color: white;
+  overflow-y: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.instagram {
+  width: 100%;
+  height: 565px;
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 390px 1fr;
+  grid-template-areas:
+    "header"
+    "img"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+  margin: 5px 10px;
+  width: auto;
+  height: auto;
+  font-weight: bold;
+  user-select: none;
+}
+
+.header-left {
+  float: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-right {
+  float: right;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img {
+  clear: both;
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+  background-image: url("./assets/post-image.png");
+  background-size: cover;
+}
+
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px auto auto;
+  grid-template-areas:
+    "top-left top-center top-right"
+    "like like like "
+    "comment comment comment";
+
+  font-size: 12px;
+}
+
+.top-left {
+  grid-area: top-left;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top-left > svg:nth-of-type(n + 2) {
+  margin-bottom: 1px;
+}
+
+.top-center {
+  grid-area: top-center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+li {
+  width: 7px;
+  height: 7px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+
+.top-right {
+  grid-area: top-right;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 10px;
+}
+
+#heart:hover {
+  color: red;
+}
+
+.like {
+  grid-area: like;
+  font-weight: bold;
+  margin: 10px 10px;
+  height: auto;
+}
+
+.comment {
+  grid-area: comment;
+  overflow: scroll;
+  margin: 0 10px;
+  width: auto;
+  font-size: 10px;
+}
+
+b {
+  font-weight: bold;
+}
