@@ -8,14 +8,14 @@
 
 /* 별찍기 1과 반대 */
 
-const star1_1 = (n) => {
+const star2_1 = (n) => {
   // for 문 사용
   for (let index = n; index > 0; index--) {
     console.log("*".repeat(index));
   }
 };
 
-const star1_2 = (n) => {
+const star2_2 = (n) => {
   // while 문 사용
   let count = n;
 
@@ -26,5 +26,5 @@ const star1_2 = (n) => {
   }
 };
 
-star1_1(5);
-star1_2(5);
+star2_1(5);
+star2_2(5);
