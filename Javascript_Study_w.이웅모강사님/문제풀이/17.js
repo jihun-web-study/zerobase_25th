@@ -1,24 +1,27 @@
-/* 
-
+/* Star pattern 4
+*****
+_****
+__***
+___**
+____*
 */
 
-const solution1 = () => {
-  //
-  return;
+const star4_1 = (n) => {
+  // for 문 사용
+  for (let index = n; index > 0; index--) {
+    console.log(`${" ".repeat(n - index)}${"*".repeat(index)}`);
+  }
 };
 
-const solution2 = () => {
-  //
-  return;
+const star4_2 = (n) => {
+  // while 문 사용
+  let count = n;
+
+  while (count > 0) {
+    console.log(`${" ".repeat(n - count)}${"*".repeat(count)}`);
+    count -= 1;
+  }
 };
 
-const solution3 = () => {
-  //
-  return;
-};
-
-console.log("===solution1===");
-
-console.log("===solution2===");
-
-console.log("===solution3===");
+star4_1(5);
+star4_2(5);
