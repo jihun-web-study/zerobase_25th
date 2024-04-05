@@ -39,3 +39,17 @@ console.log(solution2(7, 2)); // 3
 console.log("===solution3===");
 console.log(solution3(10, 5)); // 2
 console.log(solution3(7, 2)); // 3
+
+/* == 라이브 도중 추가 == */
+
+function solution4(num1, num2) {
+  // Math.trunc() 사용하기
+  // floor나 ceil과 다르게 그냥 정수부분만 잘라버림
+  return Math.trunc(num1 / num2);
+}
+
+console.log("===solution4===");
+console.log(solution4(10, 5)); // 2
+console.log(solution4(7, 2)); // 3
+
+console.log(parseInt(-1.5));

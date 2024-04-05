@@ -16,3 +16,21 @@ const solution = (a, b) => {
 console.log("===solution===");
 console.log(solution(9, 91)); // 991
 console.log(solution(89, 8)); // 898
+
+/* == 라이브 도중 추가 == */
+/* 
+  1. 문자열 -> 숫자 변환 : `+str`
+  2. 대소비교 : Math.max(num1, num2)
+*/
+const solution2 = (a, b) => {
+  const sum1 = +`${a}${b}`;
+  const sum2 = +`${b}${a}`;
+
+  return Math.max(sum1, sum2);
+};
+
+console.log("===solution2===");
+console.log(solution2(9, 91)); // 991
+console.log(solution2(89, 8)); // 898
+
+console.log(Math.max(1, "a"));

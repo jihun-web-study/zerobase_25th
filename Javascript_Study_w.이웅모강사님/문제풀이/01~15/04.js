@@ -19,12 +19,7 @@ const isEven1 = (n) => {
   */
 };
 
-const isEven2 = (n) => {
-  if (typeof n !== "number") return NaN;
-
-  // 단축형
-  return !(n % 2 === 1 || n % 2 === -1);
-};
+const isEven2 = (n) => n % 2 === 0;
 
 const isEven3 = (n) => {
   if (typeof n !== "number") return NaN;
@@ -70,7 +65,6 @@ console.log(isEven1(1)); // false
 console.log(isEven1(2)); // true
 console.log(isEven1(101)); // false
 console.log(isEven1(-2)); // true
-console.log(isEven1("s")); // true
 
 console.log("===solution2===");
 console.log(isEven2(0)); // true
@@ -92,4 +86,3 @@ console.log(isEven4(1)); // false
 console.log(isEven4(2)); // true
 console.log(isEven4(101)); // false
 console.log(isEven4(-2)); // true
-console.log(isEven4("s")); // true

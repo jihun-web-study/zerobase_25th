@@ -21,3 +21,14 @@ console.log(solution1(70)); // 1
 console.log(solution1(90)); // 2
 console.log(solution1(91)); // 3
 console.log(solution1(180)); // 4
+
+/* == 라이브 도중 추가 == */
+const solution2 = (angle) => {
+  // 다중 if문 - 특수각 조건
+  if (angle < 90) return 1;
+  if (angle === 90) return 2;
+  if (angle > 90 && angle < 180) return 3;
+  if (angle < 180) return 4;
+
+  return -1;
+};

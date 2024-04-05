@@ -26,3 +26,10 @@ console.log("===solution1===");
 console.log(swap1(arr, 1, 2)); // [1, 3, 2, 4]
 console.log("===solution2===");
 console.log(swap2(arr, 1, 2)); // [1, 3, 2, 4]
+
+/* == 라이브 도중 추가 == */
+const swap3 = (arr, i, j) => {
+  return arr.with(i, arr[j]).with(j, arr[i]);
+};
+console.log("===solution3===");
+console.log(swap3(arr, 1, 2)); // [1, 3, 2, 4]

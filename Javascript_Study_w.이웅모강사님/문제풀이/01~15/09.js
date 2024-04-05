@@ -17,3 +17,16 @@ const solution1 = (n, k) => {
 console.log("===solution1===");
 console.log(solution1(10, 3)); // 124000
 console.log(solution1(64, 6)); // 768000
+
+/* == 라이브 도중 추가 == */
+/* parseInt -> math.trunc */
+
+const solution2 = (n, k) => {
+  const payLambs = n * 12_000;
+  const payDrinks = (k - Math.trunc(n / 10)) * 2_000;
+
+  return payLambs + payDrinks;
+};
+console.log("===solution2===");
+console.log(solution2(10, 3)); // 124000
+console.log(solution2(64, 6)); // 768000
