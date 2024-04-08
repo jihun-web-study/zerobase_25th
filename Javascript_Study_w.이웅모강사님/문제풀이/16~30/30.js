@@ -1,24 +1,23 @@
-/* 
-
+/* average
+숫자 배열 scores가 주어지면 모든 요소의 평균을 반환
 */
 
-const solution1 = () => {
-  //
-  return;
+const average = (scores) => {
+  console.time();
+  const length = scores.length;
+  console.timeEnd();
+  if (!length) return 0;
+
+  const sum = scores.reduce((sum, num) => sum + num, 0);
+
+  return Math.round(sum / length);
 };
 
-const solution2 = () => {
-  //
-  return;
-};
+// 왜 얘만 length 체크에서 시간 늘어지는지 모르겠음...
+console.log(average([73, 82, 99])); // 85
 
-const solution3 = () => {
-  //
-  return;
-};
+console.log(average([50, 100, 90, 45, 70])); // 71
 
-console.log("===solution1===");
+console.log(average([100])); // 100
 
-console.log("===solution2===");
-
-console.log("===solution3===");
+console.log(average([])); // 0
