@@ -41,3 +41,9 @@ console.log(fizzBuzz(20));
   '11', 'Fizz', '13', '14', 'FizzBuzz', '16', '17', 'Fizz', '19', 'Buzz'
 ]
 */
+
+/* == 라이브 도중 추가 == */
+/* 진행하다 개인 생각 메모
+나는 if-continue를 사용하였는데
+이 경우 if-else-if 사용하는 것이 좋은 것 같다.
+*/

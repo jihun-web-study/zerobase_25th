@@ -18,3 +18,8 @@ console.log(solution(10)); // 30
 console.log(solution(4)); // 6
 console.log(solution(3)); // 2
 console.log(solution(1)); // 0
+
+/* == 라이브 도중 추가 == */
+const sum_공식 = (n) => (n / 2) * (n / 2 + 1);
+
+console.log(sum_공식(10)); // 30

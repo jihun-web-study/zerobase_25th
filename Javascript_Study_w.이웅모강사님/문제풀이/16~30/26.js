@@ -11,3 +11,11 @@ const solution = (array, n) => {
 
 console.log(solution([1, 1, 2, 3, 4, 5], 1)); // 2
 console.log(solution([0, 2, 3, 4], 1)); // 0
+
+/* == 라이브 도중 추가 == */
+// 왜 필터 생각을 못하고 reduce를 썼을까
+const solutionFilter = (array, n) => {
+  return array.filter((v) => v === n).length;
+};
+console.log(solutionFilter([1, 1, 2, 3, 4, 5], 1)); // 2
+console.log(solutionFilter([0, 2, 3, 4], 1)); // 0

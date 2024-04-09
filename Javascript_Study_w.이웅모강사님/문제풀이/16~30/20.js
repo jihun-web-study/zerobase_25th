@@ -8,6 +8,8 @@
 
 const star7_1 = (n) => {
   // for 문 사용
+
+  // O(n^2)
   for (let index = 0; index < n; index++) {
     console.log(`${"*".repeat(n)}`);
   }
@@ -32,3 +34,14 @@ console.log("========");
 star7_2(5);
 console.log("========");
 star7_3(5);
+
+/* == 라이브 도중 추가 == */
+const star7_4 = (n) => {
+  // O(n^2)인 star7_1의 개선 버전
+  // 이 코드는 O(n + n) = O(n)
+  const star = "*".repeat(n);
+
+  for (let index = 0; index < n; index++) {
+    console.log(star);
+  }
+};

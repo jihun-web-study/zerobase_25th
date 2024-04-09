@@ -28,3 +28,14 @@ const star2_2 = (n) => {
 
 star2_1(5);
 star2_2(5);
+
+/* == 라이브 도중 추가 == */
+const star2_3 = (n) => {
+  const initStar = "*".repeat(n);
+
+  for (let index = 0; index < n; index++) {
+    console.log(initStar.slice(0, n - index));
+  }
+};
+
+star2_3(5);
