@@ -44,3 +44,48 @@ console.log(solution2(5, 555)); // [5, 50, 55, 500, 505, 550, 555]
 console.log(solution2(10, 20)); // [-1]
 
 /* == 라이브 도중 추가 == */
+const solution3 = (l, r) => {
+  // array.every() 사용하기
+
+  const start = Math.ceil(l / 5) * 5; // n 이상에서 가장 가까운 5의 배수
+  const end = Math.floor(r / 5) * 5; // m 이하에서 가장 가까운 5의 배수
+
+  const arr = Array.from({ length: (end - start) / 5 + 1 }, (_, index) =>
+    String(start + index * 5)
+  );
+
+  const result = [];
+
+  arr.forEach((num) => {
+    if ([...num].every((c) => c === "0" || c === "5")) result.push(Number(num));
+  });
+
+  return result;
+};
+
+console.log("===solution3===");
+console.log(solution3(5, 555)); // [5, 50, 55, 500, 505, 550, 555]
+console.log(solution3(10, 20)); // [-1]
+
+const solution4 = (l, r) => {
+  // 정규표현식 + replaceAll() 사용하기
+
+  const start = Math.ceil(l / 5) * 5; // n 이상에서 가장 가까운 5의 배수
+  const end = Math.floor(r / 5) * 5; // m 이하에서 가장 가까운 5의 배수
+
+  const arr = Array.from({ length: (end - start) / 5 + 1 }, (_, index) =>
+    String(start + index * 5)
+  );
+
+  const result = [];
+
+  arr.forEach((num) => {
+    if (num.replaceAll(/[05]/g, "") === "") result.push(Number(num));
+  });
+
+  return result;
+};
+
+console.log("===solution4===");
+console.log(solution4(5, 555)); // [5, 50, 55, 500, 505, 550, 555]
+console.log(solution4(10, 20)); // [-1]

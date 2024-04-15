@@ -36,3 +36,17 @@ console.log(solution([0, 1, 0, 1, 0])); // [0, 1, 0, 1, 0]
 console.log(solution([0, 1, 1, 0])); // [-1]
 
 /* == 라이브 도중 추가 == */
+const solution2 = (arr) => {
+  const stk = [];
+
+  arr.forEach((element) => {
+    if (stk.at(-1) === element) stk.pop();
+    else stk.push(element);
+  });
+
+  return stk.length === 0 ? [-1] : stk;
+};
+
+console.log(solution2([0, 1, 1, 1, 0])); // [0, 1, 0]
+console.log(solution2([0, 1, 0, 1, 0])); // [0, 1, 0, 1, 0]
+console.log(solution2([0, 1, 1, 0])); // [-1]

@@ -14,3 +14,16 @@ console.log(solution([1, 1, 1, 1, 1, 2])); // [2, 1, 1, 1, 1, 1]
 console.log(solution([1, 0, 1, 1, 1, 3, 5])); // [5, 3, 1, 1, 1, 0, 1]
 
 /* == 라이브 도중 추가 == */
+// JS에서 타입 정의하기
+/**
+ * @param {number[]} arr
+ */
+
+// toReversed() 사용
+const solution2 = (arr) => arr.toReversed();
+
+console.log(solution2([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+console.log(solution2([1, 1, 1, 1, 1, 2])); // [2, 1, 1, 1, 1, 1]
+console.log(solution2([1, 0, 1, 1, 1, 3, 5])); // [5, 3, 1, 1, 1, 0, 1]
+
+// swap으로 푸는 방법도 있다고 함

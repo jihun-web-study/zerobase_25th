@@ -12,3 +12,9 @@ console.log(solution([12, 4, 15, 46, 38, 1, 14, 56, 32, 10]));
 // [15, 32, 38, 46, 56]
 
 /* == 라이브 도중 추가 == */
+
+const solution2 = (nums) => {
+  return nums.toSorted((a, b) => a - b).slice(5);
+};
+
+console.log(solution2([12, 4, 15, 46, 38, 1, 14, 56, 32, 10]));
