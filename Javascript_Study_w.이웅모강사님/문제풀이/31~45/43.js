@@ -20,4 +20,10 @@ const solution = (names) => {
 
 // prettier-ignore
 console.log(solution(["nami", "ahri", "jayce", "garen", "ivern", "vex", "jinx"])); // ["nami", "vex"]
+
 /* == 라이브 도중 추가 == */
+
+const solution2 = (names) => names.filter((_, i) => i % 5 === 0);
+
+// prettier-ignore
+console.log(solution2(["nami", "ahri", "jayce", "garen", "ivern", "vex", "jinx"])); // ["nami", "vex"]

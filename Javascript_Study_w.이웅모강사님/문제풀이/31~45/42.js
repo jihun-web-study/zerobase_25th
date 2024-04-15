@@ -6,19 +6,34 @@
 
 const solution = (nums) => {
   // do something
-  const eachSums = nums.reduce(
-    (obj, value, index) => {
-      if (index % 2 === 0) obj.even += value;
-      else obj.odd += value;
-      return obj;
+  // 코드리뷰: 변수를 객체 분해 구조로 변경, 변수명을 변경
+  // 삼항연산자로 한 줄 쓰기의 경우 return 조심하기 // 카톡 참고
+  const { oddIndexSum, evenIndexSum } = nums.reduce(
+    ({ oddIndexSum, evenIndexSum }, value, index) => {
+      if (index % 2 === 0) evenIndexSum += value;
+      else oddIndexSum += value;
+      return { oddIndexSum, evenIndexSum };
     },
-    { odd: 0, even: 0 }
+    { oddIndexSum: 0, evenIndexSum: 0 }
   );
 
-  return Math.max(eachSums.odd, eachSums.even);
+  return Math.max(oddIndexSum, evenIndexSum);
 };
 
 console.log(solution([4, 2, 6, 1, 7, 6])); // 17
 console.log(solution([-1, 2, 5, 6, 3])); // 8
 
 /* == 라이브 도중 추가 == */
+const solution2 = (nums) => {
+  // do something
+  const eachSums = nums.reduce(
+    ([s1, s2], value, index) =>
+      index % 2 ? [s1 + value, s2] : [s1, s2 + value],
+    [0, 0]
+  );
+
+  return Math.max(...eachSums);
+};
+
+console.log(solution2([4, 2, 6, 1, 7, 6])); // 17
+console.log(solution2([-1, 2, 5, 6, 3])); // 8

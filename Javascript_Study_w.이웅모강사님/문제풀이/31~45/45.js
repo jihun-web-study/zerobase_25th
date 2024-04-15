@@ -9,9 +9,18 @@ const solution = (todos, finished) => {
 };
 
 console.log(
-  solution(
-    ["problemsolving", "practiceguitar", "swim", "studygraph"],
-    [true, false, true, false]
-  )
+  solution(['problemsolving', 'practiceguitar', 'swim', 'studygraph'], [true, false, true, false])
 ); // ["practiceguitar", "studygraph"]
 /* == 라이브 도중 추가 == */
+// 문제에서 준 입력이 좋지 않아서 변경
+const getTodosByFinished = (todos, finished) =>
+  todos.filter((todo) => todo.finished === finished).map((todo) => todo.name);
+
+const todos = [
+  { name: 'problemsolving', finished: true },
+  { name: 'practiceguitar', finished: false },
+  { name: 'swim', finished: true },
+  { name: 'studygraph', finished: false },
+];
+
+console.log(getTodosByFinished(todos, false));

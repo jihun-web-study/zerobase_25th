@@ -6,12 +6,21 @@ nums를 n 번째 원소 이후의 원소들과 n 번째까지의 원소들�
 const solution = (nums, n) => {
   const copy = JSON.parse(JSON.stringify(nums)); // 깊은복사
 
-  const left = copy.splice(0, n);
+  const front = copy.splice(0, n);
 
-  return copy.concat(left);
+  return copy.concat(front);
 };
 
 console.log(solution([2, 1, 6], 1)); // [1, 6, 2]
 console.log(solution([5, 2, 1, 7, 5], 3)); // [7, 5, 5, 2, 1]
 
 /* == 라이브 도중 추가 == */
+const solution2 = (nums, n) => {
+  const front = nums.slice(0, n);
+  const back = nums.slice(n);
+
+  return [...back, ...front];
+};
+
+console.log(solution2([2, 1, 6], 1)); // [1, 6, 2]
+console.log(solution2([5, 2, 1, 7, 5], 3)); // [7, 5, 5, 2, 1]
