@@ -1,26 +1,14 @@
-/* 
-
+/* 문자열을 배열로 변환하기
+문자열 str이 매개변수로 주어질 때, str의 각 문자를 요소로 갖는 배열을 return
 */
 
-const solution1 = () => {
-  //
-  return;
+const solution = (str) => {
+  // do something
+  return str.split('');
 };
 
-const solution2 = () => {
-  //
-  return;
-};
-
-const solution3 = () => {
-  //
-  return;
-};
-
-console.log("===solution1===");
-
-console.log("===solution2===");
-
-console.log("===solution3===");
+console.log(solution('Hello world'));
+// ["H", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
+console.log(solution('')); // []
 
 /* == 라이브 도중 추가 == */
