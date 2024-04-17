@@ -11,8 +11,14 @@ const solution = (str) => {
   return result.sort();
 };
 
-console.log(solution("banana")); // ['a', 'ana', 'anana', 'banana', 'na', 'nana']
-console.log(solution("programmers"));
+console.log(solution('banana')); // ['a', 'ana', 'anana', 'banana', 'na', 'nana']
+console.log(solution('programmers'));
 // ['ammers', 'ers', 'grammers', 'mers', 'mmers', 'ogrammers', 'programmers', 'rammers', 'rogrammers', 'rs', 's']
 
 /* == 라이브 도중 추가 == */
+
+const solution1 = (str) => Array.from({ length: str.length }, (_, i) => str.slice(i)).sort();
+
+console.log(solution1('banana')); // ['a', 'ana', 'anana', 'banana', 'na', 'nana']
+console.log(solution1('programmers'));
+// ['ammers', 'ers', 'grammers', 'mers', 'mmers', 'ogrammers', 'programmers', 'rammers', 'rogrammers', 'rs', 's']

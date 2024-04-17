@@ -4,13 +4,13 @@ arr의 원소들을 순서대로 이어 붙인 문자열을 return
 */
 
 const solution1 = (arr) => {
-  return arr.reduce((concat, str) => (concat += str), "");
+  return arr.reduce((concat, str) => concat + str, '');
 };
 
-const solution = (arr) => {
-  return arr.join("");
+const solution2 = (arr) => {
+  return arr.join('');
 };
 
-console.log(solution(["a", "b", "c"])); // 'abc'
-
+console.log(solution1(['a', 'b', 'c'])); // 'abc'
+console.log(solution2(['a', 'b', 'c'])); // 'abc'
 /* == 라이브 도중 추가 == */

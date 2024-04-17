@@ -6,7 +6,7 @@ const solution = (nStr) => {
   return +nStr;
 };
 
-console.log(solution("10")); // 10
-console.log(solution("8542")); // 8542
+console.log(solution('10')); // 10
+console.log(solution('8542')); // 8542
 
 /* == 라이브 도중 추가 == */

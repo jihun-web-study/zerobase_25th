@@ -4,16 +4,16 @@ nums의 홀수만 순서대로 이어 붙인 수와 짝수만 순서대로 이�
 */
 
 const solution = (nums) => {
-  const sumSplit = nums.reduce(
+  const { sumOdd, sumEven } = nums.reduce(
     (result, num) => {
       if (num % 2 === 0) result.sumEven += String(num);
       else result.sumOdd += String(num);
       return result;
     },
-    { sumOdd: "", sumEven: "" }
+    { sumOdd: '', sumEven: '' }
   );
 
-  return Number(sumSplit.sumOdd) + Number(sumSplit.sumEven);
+  return Number(sumOdd) + Number(sumEven);
 };
 
 console.log(solution([3, 4, 5, 2, 1])); // 393

@@ -7,12 +7,12 @@ const solution = (str, indices) => {
   let answer = [...str];
 
   indices.forEach((element) => {
-    answer[element] = "";
+    answer[element] = '';
   });
 
-  return answer.join("");
+  return answer.join('');
 };
 
-console.log(solution("apporoograpemmemprs", [1, 16, 6, 15, 0, 10, 11, 3])); // 'programmers'
+console.log(solution('apporoograpemmemprs', [1, 16, 6, 15, 0, 10, 11, 3])); // 'programmers'
 
 /* == 라이브 도중 추가 == */

@@ -4,7 +4,7 @@
 */
 
 const solution = (str1, str2) => {
-  let result = "";
+  let result = '';
 
   for (const key in str1) {
     result += `${str1[key]}${str2[key]}`;
@@ -13,6 +13,13 @@ const solution = (str1, str2) => {
   return result;
 };
 
-console.log(solution("aaaaa", "bbbbb")); // 'ababababab'
+console.log(solution('aaaaa', 'bbbbb')); // 'ababababab'
+
+const solution1 = (str1, str2) => {
+  const [arr1, arr2] = [[...str1], [...str2]];
+  return arr1.reduce((concat, str, idx) => concat + str + arr2[idx], '');
+};
+
+console.log(solution1('aaaaa', 'bbbbb')); // 'ababababab'
 
 /* == 라이브 도중 추가 == */
