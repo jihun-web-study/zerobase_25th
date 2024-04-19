@@ -3,7 +3,6 @@
 */
 
 const solution = (str) => {
-  // do something
   return str.split('');
 };
 
@@ -12,3 +11,18 @@ console.log(solution('Hello world'));
 console.log(solution('')); // []
 
 /* == 라이브 도중 추가 == */
+const solution2 = (str) => {
+  return [...str];
+};
+
+console.log(solution2('Hello world'));
+// ["H", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
+console.log(solution2('')); // []
+
+const solution3 = (str) => {
+  return Array.from(str);
+};
+
+console.log(solution3('Hello world'));
+// ["H", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
+console.log(solution3('')); // []

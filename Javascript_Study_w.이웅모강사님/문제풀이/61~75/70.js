@@ -5,7 +5,7 @@
 const solution = (str) => {
   return str
     .split('x')
-    .filter((v) => v !== '')
+    .filter((v) => v !== '') // .filter(Boolean) 으로도 사용 가능
     .toSorted();
 };
 
