@@ -13,3 +13,14 @@ console.log(solution('heLLo')); // "ehllo"
 console.log(solution('Python')); // "hnopty"
 
 /* == 라이브 도중 추가 == */
+
+function solution2(n) {
+  if (n === 1) return true;
+
+  for (let i = 2; i <= n; i++) {
+    console.log(n, i);
+    if (n % i === 0 && i === n) return true;
+  }
+}
+
+solution2(7);
