@@ -3,7 +3,7 @@
 spell에 담긴 알파벳을 한번씩만 모두 사용한 단어가 dic에 존재한다면 1, 존재하지 않는다면 2를 return
 */
 
-function solution2(spell, dic) {
+function solution1(spell, dic) {
   const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
   const check = spell.toSorted();
@@ -15,8 +15,19 @@ function solution2(spell, dic) {
   return 2;
 }
 
-console.log(solution2(['p', 'o', 's'], ['sod', 'eocd', 'qixm', 'adio', 'soo'])); // 2
-console.log(solution2(['z', 'd', 'x'], ['def', 'dww', 'dzx', 'loveaw'])); // 1
-console.log(solution2(['s', 'o', 'm', 'd'], ['moos', 'dzx', 'smm', 'sunmmo', 'som'])); // 2
+console.log(solution1(["p", "o", "s"], ["sod", "eocd", "qixm", "adio", "soo"])); // 2
+console.log(solution1(["z", "d", "x"], ["def", "dww", "dzx", "loveaw"])); // 1
+console.log(solution1(["s", "o", "m", "d"], ["moos", "dzx", "smm", "sunmmo", "som"])); // 2
 
+function solution2(spell, dic) {
+  for (const word of dic) {
+    if (spell.length === word.length && spell.every((c) => word.includes(c))) return 1;
+  }
+
+  return 2;
+}
+
+console.log(solution2(["p", "o", "s"], ["sod", "eocd", "qixm", "adio", "soo"])); // 2
+console.log(solution2(["z", "d", "x"], ["def", "dww", "dzx", "loveaw"])); // 1
+console.log(solution2(["s", "o", "m", "d"], ["moos", "dzx", "smm", "sunmmo", "som"])); // 2
 /* == 라이브 도중 추가 == */

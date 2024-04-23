@@ -6,7 +6,9 @@ const solution = (str, target) => {
   return +str.includes(target);
 };
 
-console.log(solution('banana', 'ana')); // 1
-console.log(solution('banana', 'wxyz')); // 0
+console.log(solution("banana", "ana")); // 1
+console.log(solution("banana", "wxyz")); // 0
 
 /* == 라이브 도중 추가 == */
+
+// 옛날부터 존재하던 indexOf()를 쓰는 것도 하나의 방법

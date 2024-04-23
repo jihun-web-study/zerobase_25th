@@ -11,7 +11,43 @@ const solution = (babbling) => {
   return res;
 };
 
-console.log(solution(['aya', 'yee', 'u', 'maa', 'wyeoo'])); // 1
-console.log(solution(['ayaye', 'uuuma', 'ye', 'yemawoo', 'ayaa'])); // 3
+console.log(solution(["aya", "yee", "u", "maa", "wyeoo"])); // 1
+console.log(solution(["ayaye", "uuuma", "ye", "yemawoo", "ayaa"])); // 3
+
+const solution2 = (babbling) => {
+  const convert = babbling.map((babu) =>
+    Number(babu.replace("aya", 0).replace("ye", 0).replace("woo", 0).replace("ma", 0))
+  );
+
+  return convert.filter((v) => v === 0).length;
+};
+
+console.log(solution2(["aya", "yee", "u", "maa", "wyeoo"])); // 1
+console.log(solution2(["ayaye", "uuuma", "ye", "yemawoo", "ayaa"])); // 3
 
 /* == 라이브 도중 추가 == */
+
+const solution3 = (babbling) => {
+  const convert = babbling.map((babu) =>
+    babu.replace("aya", " ").replace("ye", " ").replace("woo", " ").replace("ma", " ")
+  );
+
+  // trim 생각을 못함
+  return convert.filter((str) => str.trim() === "").length;
+};
+
+console.log(solution3(["aya", "yee", "u", "maa", "wyeoo"])); // 1
+console.log(solution3(["ayaye", "uuuma", "ye", "yemawoo", "ayaa"])); // 3
+
+const solution4 = (babbling) => {
+  let count = 0;
+
+  for (const babu of babbling) {
+    if (babu.replace(/aya|ye|woo|ma/g, "") === "") count += 1;
+  }
+
+  return count;
+};
+
+console.log(solution4(["aya", "yee", "u", "maa", "wyeoo"])); // 1
+console.log(solution4(["ayaye", "uuuma", "ye", "yemawoo", "ayaa"])); // 3
