@@ -2,12 +2,13 @@
 영어 점수와 수학 점수를 담은 2차원 정수 배열 scores가 주어질 때,
  영어 점수와 수학 점수의 평균을 기준으로 매긴 등수를 담은 배열을 return
 */
-// sort 돌리고 앞의 값과 같으면 이전 인덱스값 반환하기
+// 내 풀이
+// 평균 배열 -> 정렬 -> 평균과 정렬 배열 비교 후 동일값에 대한 index 반환
+// lastIndex가 아니라 첫번째 index를 구하면 동일 등수 고려됨
 const solution = (scores) => {
-  const sum = (arr) => arr.reduce((sum, num) => sum + num, 0);
+  const averageArr = scores.map(([eng, math]) => (eng + math) / 2);
 
-  const averageArr = scores.map((v) => sum(v) / 2);
-
+  // const sortAverage = [...averageArr].sort((a, b) => b - a);
   const sortAverage = averageArr.toSorted((a, b) => b - a);
 
   const result = averageArr.map((avr) => sortAverage.indexOf(avr) + 1);

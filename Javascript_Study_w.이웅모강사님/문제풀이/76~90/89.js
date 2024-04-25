@@ -9,7 +9,7 @@
 const solution = (answers) => {
   const eachAnswers = [0, 0, 0];
 
-  const solveMethod = [
+  const patterns = [
     [1, 2, 3, 4, 5],
     [2, 1, 2, 3, 2, 4, 2, 5],
     [3, 3, 1, 1, 2, 2, 4, 4, 5, 5],
@@ -17,7 +17,7 @@ const solution = (answers) => {
 
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < answers.length; j++) {
-      if (answers[j] === solveMethod[i][j % solveMethod[i].length]) eachAnswers[i] += 1;
+      if (answers[j] === patterns[i][j % patterns[i].length]) eachAnswers[i] += 1;
     }
   }
 

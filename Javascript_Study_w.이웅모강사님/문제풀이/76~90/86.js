@@ -55,3 +55,21 @@ console.log(findDivisors2(24)); // [1, 2, 3, 4, 6, 8, 12, 24]
 console.log(findDivisors2(29)); // [1, 29]
 
 /* == 라이브 도중 추가 == */
+
+const findDivisors3 = (n) => {
+  const set = new Set();
+
+  for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      set.add(i).add(n / i);
+    }
+  }
+
+  return [...set].sort((a, b) => a - b);
+};
+
+console.log(findDivisors3(1)); // [1]
+console.log(findDivisors3(15)); // [1, 3, 5, 15]
+console.log(findDivisors3(16)); // [1, 2, 4, 8, 16]
+console.log(findDivisors3(24)); // [1, 2, 3, 4, 6, 8, 12, 24]
+console.log(findDivisors3(29)); // [1, 29]

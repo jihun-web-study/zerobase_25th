@@ -19,3 +19,24 @@ console.log(solution([1, 2, 3, 4]) === 5); // 5
 console.log(solution([2, 4, 8]) === 16); // 16
 
 /* == 라이브 도중 추가 == */
+
+const solution1 = (common) => {
+  // true면 등차, false면 등비
+  const isArithmeticalProgression = {
+    true: common.at(-1) + (common[1] - common[0]),
+    false: common.at(-1) * (common[1] / common[0]),
+  };
+
+  return isArithmeticalProgression[common[1] - common[0] === common[2] - common[1]];
+};
+
+console.log(solution1([1, 2, 3, 4]) === 5); // 5
+console.log(solution1([2, 4, 8]) === 16); // 16
+
+const solution3 = (common) => {
+  const [s, e] = [common[0], common.at(-1)];
+  return e === Math.pow(s, common.length) ? s * e : s + e;
+};
+
+console.log(solution3([1, 3, 5, 7])); // 9
+console.log(solution3([2, 4, 8]) === 16); // 16

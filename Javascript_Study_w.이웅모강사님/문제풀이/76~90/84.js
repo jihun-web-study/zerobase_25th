@@ -5,7 +5,10 @@
 */
 
 const solution = (a, d, included) => {
-  const arr = Array.from({ length: included.length }, (_, i) => i * d + a);
+  //const arr = Array.from({ length: included.length }, (_, i) => i * d + a);
+  const arr = Array(included.length)
+    .fill(a)
+    .map((n, i) => n + i * d);
 
   const sum = included.reduce((trueSum, bool, idx) => (bool ? trueSum + arr[idx] : trueSum), 0);
 
@@ -16,3 +19,12 @@ console.log(solution(3, 4, [true, false, false, true, true]) === 37); // 37
 console.log(solution(7, 1, [false, false, false, true, false, false, false]) === 10); // 10
 
 /* == 라이브 도중 추가 == */
+// 굳이 배열을 하나 만들 필요가 없음
+const solution2 = (a, d, included) => {
+  const sum = included.reduce((trueSum, bool, idx) => (bool ? trueSum + a + d * idx : trueSum), 0);
+
+  return sum;
+};
+
+console.log(solution2(3, 4, [true, false, false, true, true]) === 37); // 37
+console.log(solution2(7, 1, [false, false, false, true, false, false, false]) === 10); // 10

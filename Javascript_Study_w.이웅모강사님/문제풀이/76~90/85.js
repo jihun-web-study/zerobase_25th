@@ -27,3 +27,19 @@ console.log(sumOfDigits(1010) === 2); // 2
 console.log(sumOfDigits(54321) === 15); // 15
 
 /* == 라이브 도중 추가 == */
+
+const sumOfDigits2 = (n) => {
+  let sum = 0;
+
+  while (n > 0) {
+    sum += n % 10;
+    n = Math.trunc(n / 10);
+  }
+
+  return sum;
+};
+
+console.log(sumOfDigits2(1) === 1); // 1
+console.log(sumOfDigits2(123) === 6); // 6
+console.log(sumOfDigits2(1010) === 2); // 2
+console.log(sumOfDigits2(54321) === 15); // 15

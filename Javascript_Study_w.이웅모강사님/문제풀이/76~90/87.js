@@ -23,3 +23,10 @@ console.log(flat([1, 2, 3])); // [1, 2, 3]
 console.log(flat([])); // []
 
 /* == 라이브 도중 추가 == */
+
+const flat2 = (arr) =>
+  arr.reduce((flatten, v) => [...flatten, ...(Array.isArray(v) ? flat2(v) : [v])], []);
+
+console.log(flat2([1, 2, 3, [4, 5, [6, 7], 8], 9])); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(flat2([1, 2, 3])); // [1, 2, 3]
+console.log(flat2([])); // []
