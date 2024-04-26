@@ -1,12 +1,14 @@
 /* 진료 순서 정하기
 환자의 응급도를 기준으로 진료 순서
-
+정수 배열 emergency가 매개변수로 주어질 때 응급도가 높은 순서대로 진료 순서를 정한 배열을 return
 */
 
 const solution = (emergency) => {
-  const map = new Map(emergency, 0);
+  const sorted = emergency.toSorted((a, b) => b - a);
 
-  return map;
+  const result = emergency.map((v) => sorted.indexOf(v) + 1);
+
+  return result;
 };
 
 console.log(solution([3, 76, 24])); // [3, 1, 2]
