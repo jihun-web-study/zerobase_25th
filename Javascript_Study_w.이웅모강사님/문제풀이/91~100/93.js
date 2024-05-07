@@ -15,3 +15,8 @@ const solution = (strings) => {
 console.log(solution(["a", "bc", "d", "efg", "hi"])); // 2
 
 /* == 라이브 도중 추가 == */
+
+const solution2 = (strings) =>
+  strings.reduce((max, str) => (str.length > max ? str.length : max), 0);
+
+console.log(solution2(["a", "bc", "d", "efg", "hi"])); // 2

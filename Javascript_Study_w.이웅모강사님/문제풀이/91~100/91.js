@@ -1,18 +1,56 @@
-/* 진료 순서 정하기
-환자의 응급도를 기준으로 진료 순서
-정수 배열 emergency가 매개변수로 주어질 때 응급도가 높은 순서대로 진료 순서를 정한 배열을 return
+/* 영어가 싫어요 // 91번으로 바뀜
+문자열 nums가 매개변수로 주어질 때, nums를 정수로 바꿔 return
 */
 
-const solution = (emergency) => {
-  const sorted = emergency.toSorted((a, b) => b - a);
+const solution = (nums) => {
+  const alphabetMap = {
+    zero: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+  };
 
-  const result = emergency.map((v) => sorted.indexOf(v) + 1);
+  let answer = nums;
 
-  return result;
+  for (const alphabet in alphabetMap) {
+    answer = answer.replaceAll(alphabet, alphabetMap[alphabet]);
+  }
+
+  return +answer;
 };
 
-console.log(solution([3, 76, 24])); // [3, 1, 2]
-console.log(solution([1, 2, 3, 4, 5, 6, 7])); // [7, 6, 5, 4, 3, 2, 1]
-console.log(solution([30, 10, 23, 6, 100])); // [2, 4, 3, 5, 1]
+console.log(solution("onetwothreefourfivesixseveneightnine")); // 123456789
+console.log(solution("onefourzerosixseven")); // 14067
 
 /* == 라이브 도중 추가 == */
+const solution2 = (nums) => {
+  const dictionary = {
+    zero: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+  };
+
+  let answer = nums;
+
+  for (const [key, value] of Object.entries(dictionary)) {
+    answer = answer.replaceAll(key, value);
+  }
+
+  return +answer;
+};
+
+console.log(solution2("onetwothreefourfivesixseveneightnine")); // 123456789
+console.log(solution2("onefourzerosixseven")); // 14067

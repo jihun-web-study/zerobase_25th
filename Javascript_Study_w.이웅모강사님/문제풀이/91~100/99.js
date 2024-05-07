@@ -4,6 +4,11 @@ ums의 두 요소의 합이 target과 같은 두 요소의 인덱스를 반환
 
 */
 
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 const twoSum = (nums, target) => {
   const filtered = nums.filter((n) => n < 9);
   if (filtered.length === 2) return [0, 1];
@@ -26,14 +31,3 @@ console.log(twoSum([3, 2, 4], 6)); // [1, 2]
 console.log(twoSum([3, 3], 6)); // [0, 1]
 
 /* == 라이브 도중 추가 == */
-/* for (i = 0; i < nums.length; i++) {
-  let cpmt = target - nums[i];
-
-  console.log(i, cpmt, numIndices);
-
-  if (cpmt in numIndices) {
-    return [numIndices[cpmt], i];
-  }
-
-  numIndices[nums[i]] = i;
-} */

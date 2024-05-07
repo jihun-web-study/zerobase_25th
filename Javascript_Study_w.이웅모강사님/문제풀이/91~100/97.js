@@ -19,6 +19,41 @@ console.log(fib(3)); // 2
 console.log(fib(5)); // 5
 console.log(fib(7)); // 13
 console.log(fib(10)); // 55
+console.time(1);
 console.log(fib(30)); // 832040
+console.timeEnd(1);
+
+const fib2 = (n) => {
+  let fibos = [0, 1];
+
+  if (n < 2) return fibos[n];
+
+  for (let idx = 2; idx <= n; idx++) {
+    fibos[idx] = fibos[idx - 1] + fibos[idx - 2];
+  }
+
+  return fibos.at(-1);
+};
+
+console.log(fib2(0)); // 0
+console.log(fib2(3)); // 2
+console.log(fib2(5)); // 5
+console.log(fib2(7)); // 13
+console.log(fib2(10)); // 55
+console.time(2);
+console.log(fib2(30)); // 832040
+console.timeEnd(2);
 
 /* == 라이브 도중 추가 == */
+
+// O(2^n) -> 시간복잡도가 매우 나쁨
+const fib3 = (n) => (n < 2 ? n : fib3(n - 1) + fib3(n - 2));
+
+console.log(fib3(0)); // 0
+console.log(fib3(3)); // 2
+console.log(fib3(5)); // 5
+console.log(fib3(7)); // 13
+console.log(fib3(10)); // 55
+console.time(3);
+console.log(fib3(30)); // 832040
+console.timeEnd(3);

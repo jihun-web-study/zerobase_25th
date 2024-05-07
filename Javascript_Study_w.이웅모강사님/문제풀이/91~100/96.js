@@ -1,25 +1,26 @@
-/* 조건 문자열
-- 두 수가 `n`과 `m`이라면
-    - ">", "=" : `n` >= `m`
-    - "<", "=" : `n` <= `m`
-    - ">", "!" : `n` > `m`
-    - "<", "!" : `n` < `m`
-두 문자열 ineq와 eq가 주어집니다. ineq는 "<"와 ">"중 하나고, eq는 "="와 "!"중 하나
- 두 정수 n과 m이 주어질 때, n과 m이 ineq와 eq의 조건에 맞으면 1을 아니면 0을 return
+/* 최빈값 구하기
+최빈값은 주어진 값 중에서 가장 자주 나오는 값
+정수 배열 nums가 매개변수로 주어질 때, 최빈값을 return
+최빈값이 여러 개면 -1을 return 
 */
 
-const solution = (ineq, eq, n, m) => {
-  const method = {
-    ">=": n >= m,
-    "<=": n <= m,
-    ">!": n > m,
-    "<!": n < m,
-  };
+const solution = (nums) => {
+  if (nums.length === 1) return nums[0];
 
-  return +method[`${ineq}${eq}`];
+  const counter = new Map();
+
+  nums.forEach((element) => {
+    counter.set(element, (counter.get(element) || 0) + 1);
+  });
+
+  const max = Math.max(...counter.values());
+  const mode = [...counter].filter(([num, count]) => count === max);
+
+  return mode.length === 1 ? mode[0][0] : -1;
 };
 
-console.log(solution("<", "=", 20, 50)); // 1
-console.log(solution(">", "!", 41, 78)); // 0
+console.log(solution([1, 2, 3, 3, 3, 4])); // 3
+console.log(solution([1, 1, 2, 2])); // -1
+console.log(solution([1])); // 1
 
 /* == 라이브 도중 추가 == */
