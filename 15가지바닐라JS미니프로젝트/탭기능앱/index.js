@@ -13,3 +13,14 @@ descTabs.addEventListener("click", (event) => {
     descText.textContent = descTabType;
   }
 });
+
+const form = document.querySelector(".form");
+const formInput = document.querySelector(".form-input");
+
+form.addEventListener("submit", (e) => {
+  const formEl = e.target;
+  const inputEl = formEl.querySelector("input");
+
+  e.preventDefault();
+  console.log(inputEl.value);
+});

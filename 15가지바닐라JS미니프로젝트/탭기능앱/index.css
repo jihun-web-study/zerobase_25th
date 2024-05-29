@@ -26,6 +26,7 @@ header {
 main {
   width: 100%;
   height: 30%;
+  margin-bottom: 100px;
 }
 
 main > article {
@@ -38,8 +39,7 @@ main > article {
 }
 
 .section--img > img {
-  width: 100%;
-  /* height: 100%; */
+  height: 100%;
   aspect-ratio: 4/3;
 }
 
