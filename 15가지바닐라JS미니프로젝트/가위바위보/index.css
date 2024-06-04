@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 50%;
+}
+
+section {
+  width: 100%;
+  color: rebeccapurple;
+  justify-content: center;
+}
+
+section > h2 {
+  text-align: center;
+}
+
+.score_board {
+  display: flex;
+}
+
+.board {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
