@@ -8,9 +8,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <p>Main</p>
-        <Clock />
-        <Header />
         <CustomRouter />
       </BrowserRouter>
     </div>
