@@ -1,4 +1,4 @@
-class Queue {
+export default class Queue {
   constructor(array) {
     this.array = array || [];
     this.head = 0;
@@ -33,6 +33,10 @@ class Queue {
     return this.isEmpty() ? undefined : this.array[0];
   }
 
+  back() {
+    return this.isEmpty() ? undefined : this.array.at(-1);
+  }
+
   size() {
     return this.array.length;
   }
@@ -42,7 +46,7 @@ class Queue {
   }
 }
 
-const queue = new Queue();
+/* const queue = new Queue();
 console.log(queue);
 queue.enqueue(1);
 console.log(queue);
@@ -60,4 +64,4 @@ console.timeEnd("deq 1");
 
 console.time("deq 2");
 queue.dequeue_2();
-console.timeEnd("deq 2");
+console.timeEnd("deq 2"); */
