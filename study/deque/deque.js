@@ -1,40 +1,31 @@
-class Element {
-  constructor(data, priority) {
-    this.data = data;
-    this.priority = priority;
-  }
-}
-
 // Double-Ended Queue: 삽입/삭제가 양쪽 끝에서 가능한 Queue
 class Deque {
-  constructor(/* data, priority */) {
-    /* this.data = data;
-    this.priority = priority; */
-    this.array = [];
+  constructor(array = []) {
+    this.array = array;
   }
 
   getBuffer() {
-    return this.array.map((element) => element.data);
+    return [...this.array];
   }
 
   isEmpty() {
     return this.array.length === 0;
   }
 
-  pushFront() {
-    return this.array.length === 0;
+  pushFront(data) {
+    return this.array.unshift(data);
   }
 
   popFront() {
-    return this.array.length === 0;
+    return this.array.shift();
   }
 
-  pushBack() {
-    return this.array.length === 0;
+  pushBack(data) {
+    return this.array.push(data);
   }
 
   popBack() {
-    return this.array.length === 0;
+    return this.array.pop();
   }
 
   front() {
