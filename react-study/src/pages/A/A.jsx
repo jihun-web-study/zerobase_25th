@@ -5,6 +5,8 @@ export default function A({ temperature, setTemperature }) {
     setTemperature(e.target.value, temperature);
   };
 
+  //
+
   const pathname = useGetPathname();
   console.log(pathname, 1);
 
