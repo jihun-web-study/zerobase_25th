@@ -17,10 +17,11 @@ export default class Queue {
     return this.array.push(data);
   }
 
-  dequeue_1() {
+  dequeue() {
     return this.array.shift();
   }
 
+  // 최적화 dequeue
   dequeue_2() {
     if (this.tail === this.head) return undefined;
     const data = this.array[this.head];
