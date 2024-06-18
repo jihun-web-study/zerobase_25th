@@ -8,7 +8,7 @@ class Node {
   }
 }
 
-class BinaryTree {
+export default class BinaryTree {
   constructor() {
     this.root = null;
   }

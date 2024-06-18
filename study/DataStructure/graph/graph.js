@@ -8,7 +8,7 @@ class Graph {
   }
 
   addEdge(vertex1, vertex2) {
-    // 이것만 있으면 방향 그래프
+    // 이것만 있으면 단방향 그래프
     this.edge[vertex1].push(vertex2);
     // 이것도 있으면 무방향 그래프
     this.edge[vertex2].push(vertex1);
