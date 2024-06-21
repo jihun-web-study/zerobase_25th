@@ -6,6 +6,7 @@ import C from "pages/C/C";
 import Lottery from "pages/lottery/Lottery";
 import MainPage from "pages/MainPage";
 import ReducerPage from "pages/reducer/ReducerPage";
+import ContextPage from "pages/context/ContextPage";
 
 const CustomRouter = () => {
   return (
@@ -16,6 +17,7 @@ const CustomRouter = () => {
         <Route path="/b" element={<B />}></Route>
         <Route path="/c" element={<C />}></Route>
         <Route path="/lottery" element={<Lottery />}></Route>
+        <Route path="/context" element={<ContextPage />}></Route>
         <Route path="/reducer" element={<ReducerPage />}></Route>
         <Route path="*" element={<h1>404</h1>}></Route>
       </Route>

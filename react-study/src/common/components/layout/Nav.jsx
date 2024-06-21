@@ -17,10 +17,12 @@ const Nav = () => {
 
   return (
     <nav style={navStyle}>
+      <Link to={"/"}>Main</Link>
       <Link to={"/a"}>A</Link>
       <Link to={"/b"}>B</Link>
       <Link to={"/c"}>C</Link>
       <Link to={"/lottery"}>Lottery</Link>
+      <Link to={"/context"}>Context</Link>
       <Link to={"/reducer"}>Reducer</Link>
     </nav>
   );
