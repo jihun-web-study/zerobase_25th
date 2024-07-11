@@ -27,7 +27,7 @@ function bubbleSort_2(unsortedArr, compare) {
 }
 
 // 들어온 배열에 이미 정렬된 부분이 있다면 그 부분을 스킾하는 방법
-export function bubbleSort(unsortedArr, compare) {
+function bubbleSort_3(unsortedArr, compare) {
   let arr = [...unsortedArr];
   let swapped = false;
 
@@ -44,6 +44,8 @@ export function bubbleSort(unsortedArr, compare) {
 
   return arr;
 }
+
+export { bubbleSort_1, bubbleSort_2, bubbleSort_3 };
 /* 
 const arr = [6, 5, 1, 3, 2, 4];
 console.time(1);
