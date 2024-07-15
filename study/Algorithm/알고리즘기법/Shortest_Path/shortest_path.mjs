@@ -16,7 +16,7 @@ export default class ShortestPath {
   }
 
   // 최단 거리 노드 검색
-  #extrcatMin(queue, dist) {
+  #extractMin(queue, dist) {
     let minDistance = Number.POSITIVE_INFINITY;
     let minVertex = null;
 
@@ -42,7 +42,7 @@ export default class ShortestPath {
     dist[start] = 0;
 
     while (Object.keys(queue).length !== 0) {
-      let u = this.#extrcatMin(queue, dist);
+      let u = this.#extractMin(queue, dist);
       delete queue[u];
 
       for (const neighbor in this.edges[u]) {
